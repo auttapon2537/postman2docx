@@ -3,9 +3,9 @@ import os
 from docx import Document
 
 # Define file names as variables
-input_file = "test.postman_collection.json"
+input_file = "iDEMS-portal.postman_collection.json"
 output_folder = "output"
-output_file = os.path.join(output_folder, "test.postman_collection.docx")
+output_file = os.path.join(output_folder, "iDEMS-portal.postman_collection.docx")
 
 # Ensure the output folder exists
 os.makedirs(output_folder, exist_ok=True)
