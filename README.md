@@ -40,7 +40,7 @@ docker --version
 docker build -t postman-to-docx .
 ```
 
-3. **Build** the Docker image:
+3. **Run** the Docker container:
 ```bash
 docker run --rm -v "$(pwd)/output:/app/output" -v "$(pwd)/postman_collection.json:/app/postman_collection.json" postman-to-docx
 ```
