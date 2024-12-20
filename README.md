@@ -27,10 +27,29 @@ pip install python-docx
 python postman2docx.py
 ```
 
+## Or Run using Docker
+
+1. **Docker**: Ensure Docker is installed and running on your system.  
+   You can check the version by running:
+```bash
+docker --version
+```
+
+2. **Build** the Docker image:
+```bash
+docker build -t postman-to-docx .
+```
+
+3. **Build** the Docker image:
+```bash
+docker run --rm -v "$(pwd)/output:/app/output" -v "$(pwd)/postman_collection.json:/app/postman_collection.json" postman-to-docx
+```
+
 ## File Structure
 ```
 postman-to-docx/
 │
+├── Dockerfile              # Docker configuration
 ├── postman2docx.py         # Main script
 ├── postman_collection.json # Example Postman collection (replace with your file)
 ├── output/                 # Output folder (generated if not present)
